@@ -1,45 +1,102 @@
-YOUR NAME Lab 2: CSS Selectors
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Menal Shams Lab 2</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-Selectors
-Main Page
+  <body class="wrapper">
+    <h1 class="title">Menal Shams Lab 2: CSS Selectors</h1>
 
-First, the basics.
+    <nav>
+      <a href="selectors.html">Selectors</a>
+      <a href="index.html">Main page</a>
+    </nav>
 
-You need the following to build your website.
+    <h2 class="subtitle">Some stuff about me...</h2>
 
-HTML and CSS
-Javascript
-Node.js
-And other web development frameworks
+    <p>These are my 3 main career goals:</p>
 
-You should list your top 3 goals for the class below.
+    <div class="section_1">
+      <ul>
+        <li>UX Designer</li>
+        <li>Game UX Designer</li>
+        <li>Real Estate Agent</li>
+      </ul>
 
-Learn front-end web design
-Learn new programming languages
-Learn how to work with others in a technical space
-Learn popular web dev frameworks
+      <p>My top 5 favorite albums are:</p>
 
-Let's Try Some Inline Elements
+      <ol>
+        <li>WILLOW by WILLOW - 2019</li>
+        <li>ERYS by Jaden - 2019</li>
+        <li>Trilogy by The Weeknd - 2012</li>
+        <li>I Love You. by The Neighbourhood - 2013</li>
+      </ol>
+    </div>
 
-Sometimes you want to draw attention to something in a line of text.
+    <div class="section_2">
+      <h2 class="subtitle">Let's Try Some Inline Elements</h2>
 
-Sometimes you want to strongly emphasize something in the text.
+      <p>
+        Sometimes you want to <em>draw attention to something</em> in a line of
+        text.
+      </p>
 
-Sometimes you want to do both.
+      <p>
+        Sometimes you want to <strong>strongly emphasize something</strong> in
+        the text.
+      </p>
 
-Empty Elements
+      <p>
+        Sometimes you want to <em><strong>do both</strong></em
+        >.
+      </p>
+    </div>
+    <h3 class="subtitle">Empty Elements</h3>
 
-Soft line breaks can't wrap anything. Neither can image tags, or hard lines.
-Add a hard line under here, and make sure you've used some soft line breaks to match your page to the sample.
+    <p>
+      Soft line breaks can't wrap anything.<br />Neither can image tags, or hard
+      lines. <br />
+      Add a hard line under here, and make sure you've used some soft line
+      breaks to match your page to the sample.
+    </p>
+    <hr />
 
-Images 
-Don't forget to use alt text on your images. It's important for accessibility.
-If you build this page right, your images will form a small "carousel"
+    <div class="section_4">
+      <h2 class="subtitle">Images</h2>
 
-onigiri_1
-onigiri_2
-onigiri_3
-onigiri_4
+      <div class="carousel">
+        <div class="slides">
+          <img
+            src="images/onigiri_1.png"
+            alt="Freckled onigiri with tongue out"
+            stylewidth="1"
+          />
+          <img
+            src="images/onigiri_2.png"
+            alt="Cute frontfacing onigiri"
+            width="1"
+          />
+          <img
+            src="images/onigiri_3.png"
+            alt="Cute onigiri with eyes closed"
+            width="1"
+          />
+          <img
+            src="images/onigiri_4.png"
+            alt="Sideways cute onigiri"
+            width="1"
+          />
+        </div>
+      </div>
+    </div>
+    <hr />
 
-Include a hyperlink here to your github repository for class.
-If you want your repo to be private, be sure to invite Prof A as a "collaborator."
+    <a href="https://github.com/menal-shams/INST377-Lab-Work"
+      >Include a hyperlink here to your github repository for class.</a
+    >
+    <br />
+    If you want your repo to be private, be sure to invite Prof A as a
+    "collaborator."
+  </body>
+</html>
