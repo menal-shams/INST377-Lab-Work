@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.topbar {
+  background-color: teal;
+  padding: 10px;
+}
+
+.database {
+  margin-left: auto;
+  margin-right: 10px;
+}
+
+.menu-container {
+  color: #fff;
+  background-color: #5995da; /* Blue */
+  padding: 20px 0;
+  display: flex; /*telling browser everything in the box should be rendered with flexbox, not default box model*/
+  justify-content: center;
+}
+
+.menu {
+  border: 1px solid #fff; /* For debugging */
+  width: 900px;
+  display: flex;
+  justify-content: space-between;
+}
+.links {
+  border: 1px solid #fff; /* For debugging */
+  display: flex;
+  justify-content: flex-end;
+}
+
+.social,
+.groupproj {
+  align-self: flex-end;
+  margin-bottom: 20px;
+}
+
+.main {
+  margin-left: 20px;
+}
+
+.header-container {
+  color: #5995da;
+  background-color: #d6e9fe;
+  display: flex;
+  justify-content: center;
+}
+
+.header {
+  width: 900px;
+  height: 300px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.photo-grid-container {
+  display: flex;
+  justify-content: center;
+}
+
+.photo-grid {
+  display: flex;
+  align-items: center;
+}
+
+button {
+    height: 30px;
+    width: 50px;
+}
+
+.carousel_item {
+  border: 1px solid #fff;
+  width: 300px;
+  height: 300px;
+  display: none;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.visible {
+  display: flex;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-item {
+  border: 1px solid #fff;
+  background-color: #d6e9fe;
+  height: 200px;
+  flex: 1;
+}
+
+.footer-one,
+.footer-three {
+  background-color: #5995da;
+  flex: initial;
+  width: 300px;
+}
