@@ -1,4 +1,5 @@
-const mymap = L.map('mapid').setView([51.505, -0.09], 13);
+const mymap = L.map('mapid').setView([38.984828, -76.948226], 13);
+let markers = [];
 
 function mapInit() {
   L.tileLayer(
@@ -13,18 +14,6 @@ function mapInit() {
       accessToken: 'pk.eyJ1IjoibWVuYWxzaGFtcyIsImEiOiJja3Y2Mm1uNjY3OWJ1Mm9vZmhyemc2MWJqIn0.tgKPZMj72Y0VCsTeb-RvZw'
     }
   ).addTo(mymap);
-}
-
-function addToMap(locations) {
-  let first = true;
-
-  locations.forEach((item) => {
-    const marker = L.marker(item.geocoded_column_1.coordinates.reverse()).addTo(mymap);
-    if (first) {
-      mymap.setView(item.geocoded_column_1.coordinates.reverse());
-      first = false;
-    }
-  });
 }
 
 async function dataHandler() {
@@ -52,20 +41,43 @@ async function dataHandler() {
           </li>
       `);
 
-    html = html.splice(0, 5);
-    suggestions.innerHTML = html.join('');
-
-    return matchArray.splice(0, 5);
+    html = html.slice(0, 5).join('');
+    suggestions.innerHTML = html;
   }
 
-  searchInput.addEventListener('input', (evt) => {
-    locations = displayMatches(evt);
-    addToMap(locations);
-  });
+  function addToMap(matches) {
+    let first = true;
+    locations = matches.slice(0, 5);
+
+    markers.forEach((item) => {
+      mymap.removeLayer(item);
+    });
+    markers = [];
+
+    locations.forEach((item) => {
+      currCoordinates = item.geocoded_column_1.coordinates.reverse();
+      const marker = L.marker(currCoordinates).addTo(mymap);
+      if (first) {
+        mymap.panTo(L.latLng(currCoordinates[0], currCoordinates[1]));
+        first = false;
+      }
+      markers.push(marker);
+    });
+  }
 
   searchInput.addEventListener('input', (evt) => {
     if (evt.target.value === '') {
       suggestions.innerHTML = '';
+
+      markers.forEach((item) => {
+        mymap.removeLayer(item);
+      });
+      markers = [];
+
+      mymap.setView([38.984828, -76.948226], 13);
+    } else {
+      displayMatches(evt);
+      addToMap(findMatches(evt.target.value, restos));
     }
   });
 }
