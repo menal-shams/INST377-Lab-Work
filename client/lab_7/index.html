@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menal Shams: Lab 7</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
+    <link rel=stylesheet href="styles.css" type=text/css />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+  </head>
+
+  <body>
+    <div class = "header-wrapper">
+        <h1>Menal Shams: Lab 7</h1>
+        <span>Zip Code Food Search</span>
+    </div>
+
+    <div class="body-wrapper">
+        <div class="search-wrapper">
+            <label for="search"><strong>Search</strong></label><br />
+            <input type="text" name="search" class="search" placeholder="Enter zipcode..."></input>
+            <div class="suggestions"></div>
+        </div>
+
+        <div id="mapid"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
